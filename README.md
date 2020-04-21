@@ -12,8 +12,8 @@ goes to the next question.
 The goal then is to accumilate correct guesses to reach the winning condition which is reaching question 10.
 A total score of correct guess and wrong guesses will also be provided.
 
-This Hangman quiz will reinforce what we've already learnt about programming. I think it will be a nice supplimentry tool to use
-along side our lessons.
+This Hangman quiz will reinforce what we've/anyone already learnt/is learning about programming. I think it will be a nice supplimentry tool to use
+along side any lessons. 
 
 The target audience will be students of CoderAcademy or anyone trying to learn the Ruby programming language.
 
@@ -28,10 +28,12 @@ It will tell user to only input using 1,2 or 3.
 2. Using a .txt file with a selection of words/answers
 It will pull a random word with 1 correct and 2 wrong definitions, these will likely be stored in a hash/array.
 
-Help menu
+
 
 3. Game over when 3 wrong answers
 The program will have a loop that will be broken when 3 wrong answers is met
+The program will make sure that wrong answers doesnt go over 3 such as to 4 ect
+
 
 
 
@@ -42,6 +44,7 @@ Program prompts user to 'start game', 'quit game' and 'help' with game
 -Selecting 'start game' program continues
 -Selecting 'quit game' exits the program
 -Selecting 'help' will provide instructions on how to play game
+Selecting anything other than 1, 2 or 3 will prompt program to tell user to try again
 Randomly selects a 'word' plus 'definition'
 The user is given 3 incorrect attempts
 User selects one of the provided definitions by entering either 1,2 or 3
