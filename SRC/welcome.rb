@@ -1,6 +1,7 @@
 # require "artii"
 require "figlet"
 require "tty-prompt"
+require 'colorize'
 
 
 class Welcome_screen
@@ -19,7 +20,7 @@ class Welcome_screen
                                  |
                                 _|___"
         prompt_one = TTY::Prompt.new
-        prompt_one.keypress("\n----------------------- PRESS ANY KEY TO HANG THE MAN --------------------------\n")
+        prompt_one.keypress("\n----------------------- PRESS ANY KEY TO " + "HANG".colorize(:red) + " THE MAN --------------------------\n")
     end
 
     def welcome_two
@@ -37,7 +38,7 @@ class Welcome_screen
                                  |      / \\
                                 _|___"
         prompt_one = TTY::Prompt.new
-        prompt_one.keypress("\n----------------------- PRESS ANY KEY TO CONTINUE --------------------------\n")
+        prompt_one.keypress("\n----------------------- PRESS ANY KEY TO " + "CONTINUE".colorize(:blue) + "-------------------------------\n")
     end
 end
 
