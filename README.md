@@ -33,3 +33,21 @@ It will pull a random word with 1 correct and 2 wrong definitions, these will li
 3. 
 
 
+User Interaction and Experience
+Welcome screen
+User must press any key to continue
+Program prompts user to 'start game', 'quit game' and 'help' with game
+-Selecting 'start game' program continues
+-Selecting 'quit game' exits the program
+-Selecting 'help' will provide instructions on how to play game
+Randomly selects a 'word' plus 'definition'
+The user is given 3 incorrect attempts
+User selects one of the provided definitions by entering either 1,2 or 3
+If anything other than 1, 2 or 3 is entered the program tells the user to only use 1, 2 or 3 when selecting an answer
+If input is correct  then the 'score' increments by 1 and next 'word' and 'definition' is displayed
+If input is incorrect then 'score' is not incremented and the next 'word' and 'definition' is displayed
+This continues until the user either completes question 10 or the ascii image of the hangman completes
+If the ascii image of the hangman completes then the user loses and is displayed with the 'game over' screen
+If question 10 reached and answered then the 'congratulations' page is presented
+User is then redirected back to 'Welcome screen'
+
