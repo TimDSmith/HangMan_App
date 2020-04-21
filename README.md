@@ -28,9 +28,11 @@ It will tell user to only input using 1,2 or 3.
 2. Using a .txt file with a selection of words/answers
 It will pull a random word with 1 correct and 2 wrong definitions, these will likely be stored in a hash/array.
 
+Help menu
 
+3. Game over when 3 wrong answers
+The program will have a loop that will be broken when 3 wrong answers is met
 
-3. 
 
 
 User Interaction and Experience
