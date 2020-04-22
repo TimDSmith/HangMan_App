@@ -1,4 +1,5 @@
-require_relative "welcome.rb"
 require_relative "main_menu.rb"
 
-start_game = Welcome_screen
+intro = menu.welcome_one
+intro = menu.welcome_two
+menu.menu_options

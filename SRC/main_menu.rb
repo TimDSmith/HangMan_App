@@ -1,41 +1,41 @@
 require "figlet"
 require "tty-prompt"
 require "colorize"
-# require_relative "main_game"
+require_relative "main_game.rb"
 
 class Main_menu
-
         def welcome_one
             system("clear")
             system "figlet -c HANGMAN"
             puts "          ```````````````````````````````````````````````````````````"     
-            puts "                                 __________
-                                     |/      |
-                                     |      (_)
-                                     |      \\|/
-                                     |       |
-                                     |      / \\
-                                     |
+            puts "                                   __________
+                                    |/      |
+                                    |      (_)
+                                    |      \\|/
+                                    |       |
+                                    |      / \\
+                                    |
                                     _|___"
             prompt_one = TTY::Prompt.new
             prompt_one.keypress("\n----------------------- PRESS ANY KEY TO " + "HANG".colorize(:red) + " THE MAN --------------------------\n")
         end
-    
+        
         def welcome_two
             system("clear")
             system "figlet -c HANGMAN"
             puts "          ```````````````````````````````````````````````````````````"     
-            puts "                                 __________
-                                     |/      |
-                                     |       |
-                                     |      (_)
-                                     |      \\|/
-                                     |       |
-                                     |      / \\
+            puts "                                   __________
+                                    |/      |
+                                    |       |
+                                    |      (_)
+                                    |      \\|/
+                                    |       |
+                                    |      / \\
                                     _|___"
             prompt_one = TTY::Prompt.new
-            prompt_one.keypress("\n----------------------- PRESS ANY KEY TO " + "CONTINUE".colorize(:blue) + "-------------------------------\n")
-        end
+            prompt_one.keypress("\n----------------------- PRESS ANY KEY TO " + "CONTINUE".colorize(:green) + "-------------------------------\n")
+        end  
+
 
     def menu_options
         system("clear")
@@ -44,16 +44,9 @@ class Main_menu
         prompt_options = TTY::Prompt.new
         # prompt_two.enum_select("Choose your fate", choices)
         @prompt_options_menu = [
-            {"Start" => -> do main_game.rb end},
-            {"Help!" => -> do help_menu end},
-            {"Quit" => -> do puts "                __________
-                |/      |
-                |       |   ---UGH!
-                |      (_)
-                |      \\|/
-                |       |
-                |      / \\
-               _|___" end}
+            {"Start".colorize(:green) => -> do @start_game end},
+            {"Help!".colorize(:blue) => -> do help_menu end},
+            {"Quit".colorize(:red) => -> do quit_game end}
         ]
         prompt_options.enum_select("Choose your fate", @prompt_options_menu)
     end
@@ -67,11 +60,23 @@ class Main_menu
     system("clear")
    end
 
-
+   def quit_game
+    puts "                __________
+                |/      |
+                |       |   ---UGH!
+                |      (_)
+                |      \\|/
+                |       |
+                |      / \\
+               _|___"
+    puts "\nYou can't escape the " + "HANGMAN".colorize(:red)
+        exit
+   end
 end
 
-welcome_screen = Main_menu.new
-@welcome = welcome_screen.welcome_one
-@welcome = welcome_screen.welcome_two
+
 menu = Main_menu.new
+@intro = menu.welcome_one
+@intro = menu.welcome_two
 @menu_options = menu.menu_options
+
