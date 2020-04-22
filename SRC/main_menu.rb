@@ -76,4 +76,5 @@ end
 menu = Main_menu.new
 @intro = menu.welcome_one
 @menu_options = menu.menu_options
+@start_game = new_game.questions
 
