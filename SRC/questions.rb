@@ -1,4 +1,4 @@
-require_relative "main_game.rb"
+require_relative "main_menu.rb"
 
 class Question
      attr_accessor :prompt, :answer
@@ -48,6 +48,7 @@ def run_quiz(question_list)
           end
      end
      puts "you got #{score} out of #{question_list.length()}"
+     @menu_options = menu.menu_options
 end
 
 run_quiz(question_list)
