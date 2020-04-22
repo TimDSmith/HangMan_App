@@ -1,4 +1,3 @@
-# require "artii"
 require "figlet"
 require "tty-prompt"
 require 'colorize'
@@ -6,9 +5,7 @@ require 'colorize'
 
 class Welcome_screen
     def welcome_one
-        # a = Artii::Base.new
         system("clear")
-        # puts a.asciify("HANGMAN")
         system "figlet -c HANGMAN"
         puts "          ```````````````````````````````````````````````````````````"     
         puts "                                 __________
@@ -24,9 +21,7 @@ class Welcome_screen
     end
 
     def welcome_two
-        # a = Artii::Base.new
         system("clear")
-        # puts a.asciify("HANGMAN")
         system "figlet -c HANGMAN"
         puts "          ```````````````````````````````````````````````````````````"     
         puts "                                 __________
