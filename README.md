@@ -25,15 +25,15 @@ There will be a correct_answer variable and a wrong_answer/wrong_question variab
 Error handling will make sure that either the numbers 1, 2 or 3 are inputed and not characters/strings ect.
 It will tell user to only input using 1,2 or 3.
 
-2. Using a .txt file with a selection of words/answers
-It will pull a random word with 1 correct and 2 wrong definitions, these will likely be stored in a hash/array.
-
-
+2. Main Menu with 3 different inputs leading to different aspects of the program
+Option 1 will be to play the game and lead into the main_game.rb
+Option 2 quits the game and exits the program
+Option 3 will be to find instructions on how to play the game and lead to help_menu.rb
+Error handling will make sure the correct inputs 1, 2 and 3 are entered and not any characters/strings
 
 3. Game over when 3 wrong answers
 The program will have a loop that will be broken when 3 wrong answers is met
 The program will make sure that wrong answers doesnt go over 3 such as to 4 ect
-
 
 
 
