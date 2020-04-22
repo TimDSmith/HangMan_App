@@ -1,7 +1,7 @@
 require "figlet"
 require "tty-prompt"
 require "colorize"
-require_relative "main_game.rb"
+# require_relative "main_game.rb"
 
 class Main_menu
     def welcome_one
@@ -76,5 +76,5 @@ end
 menu = Main_menu.new
 @intro = menu.welcome_one
 @menu_options = menu.menu_options
-@start_game = new_game.questions
+# @start_game = new_game.questions
 
